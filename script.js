@@ -107,4 +107,10 @@ resetBtn.addEventListener("click", function () {
   computerScore = 0;
   pScoreBox.textContent = "0";
   cScoreBox.textContent = "0";
+  resetBtn.style.background = "transparent";
+  document.body.style.background = "#feea00";
+  document.querySelector(".resetGame").textContent = "Chose your weapon!";
+  document.querySelector(".resetGame").style.color = "black";
+  playerImg.src = "./placeholderv1.png";
+  compImg.src = "./placeholderv1.png";
 });
