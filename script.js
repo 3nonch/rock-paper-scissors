@@ -70,6 +70,9 @@ rockBtn.addEventListener("click", function () {
   } else {
     document.body.style.background = "red";
     resetBtn.style.background = "#feea00";
+    document.querySelector(".resetGame").textContent =
+      "Game is over! Please reset the game.";
+    document.querySelector(".resetGame").style.color = "white";
   }
 });
 
@@ -99,6 +102,9 @@ scissorsBtn.addEventListener("click", function () {
   } else {
     document.body.style.background = "red";
     resetBtn.style.background = "#feea00";
+    document.querySelector(".resetGame").textContent =
+      "Game is over! Please reset the game.";
+    document.querySelector(".resetGame").style.color = "white";
   }
 });
 
