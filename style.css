@@ -111,6 +111,7 @@ h3 {
   letter-spacing: 0.3rem;
   font-size: 1.8rem;
   transition: all 0.3s ease-in-out;
+  color: black;
 }
 
 .reset:hover {
@@ -125,6 +126,8 @@ h3 {
 .winner-box {
   border: 2px solid darkgreen;
   padding: 2rem;
+  width: 25rem;
+  text-align: center;
 }
 
 @media (max-width: 768px) {

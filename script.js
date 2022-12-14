@@ -55,56 +55,47 @@ const determineWinner = function (player, computer) {
 };
 
 const playRound = function (player, computer) {
-  determineWinner(player, computer);
-  pScoreBox.textContent = playerScore;
-  cScoreBox.textContent = computerScore;
-};
-
-rockBtn.addEventListener("click", function () {
-  player = "rock";
-  computer = getComputerChoice();
-  playerImg.src = "./rock.png";
-  compImg.src = `./${computer}.png`;
   if (playerScore < 3 && computerScore < 3) {
-    playRound(player, computer);
-  } else {
+    determineWinner(player, computer);
+    pScoreBox.textContent = playerScore;
+    cScoreBox.textContent = computerScore;
+  }
+  if (playerScore === 3 || computerScore === 3) {
     document.body.style.background = "red";
     resetBtn.style.background = "#feea00";
     document.querySelector(".resetGame").textContent =
       "Game is over! Please reset the game.";
     document.querySelector(".resetGame").style.color = "white";
+  }
+};
+
+rockBtn.addEventListener("click", function () {
+  if (playerScore < 3 && computerScore < 3) {
+    player = "rock";
+    computer = getComputerChoice();
+    playerImg.src = "./rock.png";
+    compImg.src = `./${computer}.png`;
+    playRound(player, computer);
   }
 });
 
 paperBtn.addEventListener("click", function () {
-  player = "paper";
-  computer = getComputerChoice();
-  playerImg.src = "./paper.png";
-  compImg.src = `./${computer}.png`;
   if (playerScore < 3 && computerScore < 3) {
+    player = "paper";
+    computer = getComputerChoice();
+    playerImg.src = "./paper.png";
+    compImg.src = `./${computer}.png`;
     playRound(player, computer);
-  } else {
-    document.body.style.background = "red";
-    resetBtn.style.background = "#feea00";
-    document.querySelector(".resetGame").textContent =
-      "Game is over! Please reset the game.";
-    document.querySelector(".resetGame").style.color = "white";
   }
 });
 
 scissorsBtn.addEventListener("click", function () {
-  player = "scissors";
-  computer = getComputerChoice();
-  playerImg.src = "./scissors.png";
-  compImg.src = `./${computer}.png`;
   if (playerScore < 3 && computerScore < 3) {
+    player = "scissors";
+    computer = getComputerChoice();
+    playerImg.src = "./scissors.png";
+    compImg.src = `./${computer}.png`;
     playRound(player, computer);
-  } else {
-    document.body.style.background = "red";
-    resetBtn.style.background = "#feea00";
-    document.querySelector(".resetGame").textContent =
-      "Game is over! Please reset the game.";
-    document.querySelector(".resetGame").style.color = "white";
   }
 });
 
