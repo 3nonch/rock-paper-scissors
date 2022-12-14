@@ -56,10 +56,10 @@ h3 {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  border: 0.3rem solid black;
+  border: 0.1rem solid black;
   width: 60rem;
   margin: 0 auto;
-  box-shadow: 0.5rem 0.5rem 0.3rem black;
+  box-shadow: 0.5rem 0.5rem black;
 }
 
 .game-box button {
@@ -78,11 +78,16 @@ h3 {
 }
 
 .summary {
-  width: 50rem;
+  width: 60rem;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10rem;
+  background-color: rgba(0, 0, 0, 1);
+  color: white;
+  padding: 2rem;
+  border: 0.1rem solid white;
+  box-shadow: 0.5rem 0.5rem white;
 }
 
 .summary img {
@@ -100,34 +105,42 @@ h3 {
 }
 
 .reset {
-  padding: 1rem 2rem;
+  padding: 2rem 3rem;
   text-transform: uppercase;
-  border: 1px solid black;
-  box-shadow: 0.1rem 0.1rem black;
-  background-color: transparent;
+  border: 1px solid white;
+  box-shadow: 0.3rem 0.3rem white;
+  background-color: black;
   cursor: pointer;
   font-weight: bold;
   font-family: "Roboto Condensed";
   letter-spacing: 0.3rem;
   font-size: 1.8rem;
   transition: all 0.3s ease-in-out;
-  color: black;
+  color: white;
 }
 
 .reset:hover {
-  transform: translateY(-10px);
-  box-shadow: 0.1rem 0.9rem black;
+  transform: translate(-10px, -10px);
+  box-shadow: 1.1rem 1.1rem white;
 }
 
 .winner {
   font-weight: 300;
+  font-size: 1.8rem;
+  text-transform: uppercase;
 }
 
 .winner-box {
-  border: 2px solid darkgreen;
   padding: 2rem;
   width: 25rem;
   text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60rem;
 }
 
 @media (max-width: 768px) {
@@ -145,5 +158,21 @@ h3 {
   }
   body {
     gap: 2rem;
+  }
+  .footer {
+    width: 30rem;
+
+    justify-content: center;
+  }
+  .winner-box {
+    border: none;
+  }
+  .summary {
+    width: 36rem;
+    gap: 3rem;
+  }
+  .summary img {
+    width: 5rem;
+    height: 5rem;
   }
 }

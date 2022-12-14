@@ -63,6 +63,7 @@ const playRound = function (player, computer) {
   if (playerScore === 3 || computerScore === 3) {
     document.body.style.background = "red";
     resetBtn.style.background = "#feea00";
+    resetBtn.style.color = "black";
     document.querySelector(".resetGame").textContent =
       "Game is over! Please reset the game.";
     document.querySelector(".resetGame").style.color = "white";
@@ -104,7 +105,8 @@ resetBtn.addEventListener("click", function () {
   computerScore = 0;
   pScoreBox.textContent = "0";
   cScoreBox.textContent = "0";
-  resetBtn.style.background = "transparent";
+  resetBtn.style.background = "black";
+  resetBtn.style.color = "white";
   document.body.style.background = "#feea00";
   document.querySelector(".resetGame").textContent = "Chose your weapon!";
   document.querySelector(".resetGame").style.color = "black";
