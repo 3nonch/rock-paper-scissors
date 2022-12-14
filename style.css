@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  background-color: #feea00;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  min-height: 100vh;
+}
+
+.heading {
+  text-align: center;
+  font-size: 4.8rem;
+}
+
+.desc {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: right;
+}
+
+.score-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.game-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 0.3rem solid black;
+  width: 60rem;
+  margin: 0 auto;
+  box-shadow: 0.5rem 0.5rem 0.3rem black;
+}
+
+.game-box button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.game-box img {
+  width: 17rem;
+}
+
+.game-box img:hover,
+.game-box img:focus {
+  transform: scale(1.2);
+}
+
+.summary {
+  width: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.summary img {
+  width: 10rem;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.summary-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reset {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border: 1px solid black;
+  box-shadow: 0.1rem 0.1rem black;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Roboto Condensed";
+  letter-spacing: 0.3rem;
+  font-size: 1.8rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.reset:hover {
+  transform: translateY(-10px);
+  box-shadow: 0.1rem 0.9rem black;
+}
+
+.winner {
+  font-weight: 300;
+}
+
+.winner-box {
+  border: 2px solid darkgreen;
+  padding: 2rem;
+}

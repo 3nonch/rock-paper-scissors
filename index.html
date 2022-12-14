@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="heading">Rock Paper Scissors</h1>
+      <p class="desc">*(Best of 5)</p>
+    </div>
+    <div class="score-box">
+      <h3>Your score: <span class="pScore">0</span></h3>
+      <h3>Computer's score: <span class="cScore">0</span></h3>
+    </div>
+    <div class="game-box">
+      <button><img src="./rock.png" alt="rock" id="rock" /></button>
+      <button><img src="./paper.png" alt="paper" id="paper" /></button>
+      <button><img src="./scissors.png" alt="scissors" id="scissors" /></button>
+    </div>
+    <div class="summary">
+      <div class="summary-box">
+        <h3 class="playerOne">Player 👇</h3>
+        <img class="playerOneImg" src="" alt="" />
+      </div>
+      <div class="summary-box">
+        <h3 class="playerTwo">Computer 👇</h3>
+        <img class="playerTwoImg" src="" alt="" />
+      </div>
+    </div>
+    <div class="winner-box">
+      <h3>Winner is: <span class="winner"></span></h3>
+    </div>
+    <div class="reset-box">
+      <button class="reset">reset</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
