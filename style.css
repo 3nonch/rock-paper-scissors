@@ -33,6 +33,12 @@ body {
   text-align: right;
 }
 
+.resetGame {
+  font-size: 1.4rem;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
 .score-box {
   display: flex;
   justify-content: space-between;
@@ -81,6 +87,7 @@ h3 {
 
 .summary img {
   width: 10rem;
+  height: 10rem;
   text-align: center;
   transition: all 0.3s ease-in-out;
 }
@@ -118,4 +125,22 @@ h3 {
 .winner-box {
   border: 2px solid darkgreen;
   padding: 2rem;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 3.6rem;
+  }
+  .score-box {
+    width: 30rem;
+  }
+  .game-box {
+    width: 36rem;
+  }
+  .game-box img {
+    width: 9rem;
+  }
+  body {
+    gap: 2rem;
+  }
 }

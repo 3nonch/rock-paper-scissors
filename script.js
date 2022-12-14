@@ -68,7 +68,8 @@ rockBtn.addEventListener("click", function () {
   if (playerScore < 3 && computerScore < 3) {
     playRound(player, computer);
   } else {
-    alert(`This round is over, please reset the game.`);
+    document.body.style.background = "red";
+    resetBtn.style.background = "#feea00";
   }
 });
 
@@ -80,7 +81,11 @@ paperBtn.addEventListener("click", function () {
   if (playerScore < 3 && computerScore < 3) {
     playRound(player, computer);
   } else {
-    alert(`This round is over, please reset the game.`);
+    document.body.style.background = "red";
+    resetBtn.style.background = "#feea00";
+    document.querySelector(".resetGame").textContent =
+      "Game is over! Please reset the game.";
+    document.querySelector(".resetGame").style.color = "white";
   }
 });
 
@@ -92,7 +97,8 @@ scissorsBtn.addEventListener("click", function () {
   if (playerScore < 3 && computerScore < 3) {
     playRound(player, computer);
   } else {
-    alert(`This round is over, please reset the game.`);
+    document.body.style.background = "red";
+    resetBtn.style.background = "#feea00";
   }
 });
 
