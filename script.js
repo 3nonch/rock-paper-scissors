@@ -3,9 +3,10 @@ const cScoreBox = document.querySelector(".cScore");
 
 const winnerBox = document.querySelector(".winner");
 
-const rockBtn = document.getElementById("rock");
-const paperBtn = document.getElementById("paper");
-const scissorsBtn = document.getElementById("scissors");
+const buttons = document.querySelectorAll("button");
+// const rockBtn = document.getElementById("rock");
+// const paperBtn = document.getElementById("paper");
+// const scissorsBtn = document.getElementById("scissors");
 const resetBtn = document.querySelector(".reset");
 
 const playerImg = document.querySelector(".playerOneImg");
@@ -70,46 +71,74 @@ const playRound = function (player, computer) {
   }
 };
 
-rockBtn.addEventListener("click", function () {
-  if (playerScore < 3 && computerScore < 3) {
-    player = "rock";
+buttons.forEach((button) => {
+  // and for each one we add a 'click' listener
+  button.addEventListener("click", () => {
+    player = button.id;
     computer = getComputerChoice();
-    playerImg.src = "./rock.png";
-    compImg.src = `./${computer}.png`;
-    playRound(player, computer);
-  }
+    if (playerScore < 3 && computerScore < 3) {
+      playerImg.src = `./${button.id}.png`;
+      compImg.src = `./${computer}.png`;
+      playRound(player, computer);
+    }
+    if (button.id === "reset") {
+      // console.log("this is the reset button");
+      // console.log(player);
+      playerScore = 0;
+      computerScore = 0;
+      pScoreBox.textContent = "0";
+      cScoreBox.textContent = "0";
+      resetBtn.style.background = "black";
+      resetBtn.style.color = "white";
+      document.body.style.background = "#feea00";
+      document.querySelector(".resetGame").textContent = "Chose your weapon!";
+      document.querySelector(".resetGame").style.color = "black";
+      playerImg.src = "./placeholderv1.png";
+      compImg.src = "./placeholderv1.png";
+    }
+  });
 });
 
-paperBtn.addEventListener("click", function () {
-  if (playerScore < 3 && computerScore < 3) {
-    player = "paper";
-    computer = getComputerChoice();
-    playerImg.src = "./paper.png";
-    compImg.src = `./${computer}.png`;
-    playRound(player, computer);
-  }
-});
+// rockBtn.addEventListener("click", function () {
+//   if (playerScore < 3 && computerScore < 3) {
+//     player = "rock";
+//     computer = getComputerChoice();
+//     playerImg.src = "./rock.png";
+//     compImg.src = `./${computer}.png`;
+//     playRound(player, computer);
+//   }
+// });
 
-scissorsBtn.addEventListener("click", function () {
-  if (playerScore < 3 && computerScore < 3) {
-    player = "scissors";
-    computer = getComputerChoice();
-    playerImg.src = "./scissors.png";
-    compImg.src = `./${computer}.png`;
-    playRound(player, computer);
-  }
-});
+// paperBtn.addEventListener("click", function () {
+//   if (playerScore < 3 && computerScore < 3) {
+//     player = "paper";
+//     computer = getComputerChoice();
+//     playerImg.src = "./paper.png";
+//     compImg.src = `./${computer}.png`;
+//     playRound(player, computer);
+//   }
+// });
 
-resetBtn.addEventListener("click", function () {
-  playerScore = 0;
-  computerScore = 0;
-  pScoreBox.textContent = "0";
-  cScoreBox.textContent = "0";
-  resetBtn.style.background = "black";
-  resetBtn.style.color = "white";
-  document.body.style.background = "#feea00";
-  document.querySelector(".resetGame").textContent = "Chose your weapon!";
-  document.querySelector(".resetGame").style.color = "black";
-  playerImg.src = "./placeholderv1.png";
-  compImg.src = "./placeholderv1.png";
-});
+// scissorsBtn.addEventListener("click", function () {
+//   if (playerScore < 3 && computerScore < 3) {
+//     player = "scissors";
+//     computer = getComputerChoice();
+//     playerImg.src = "./scissors.png";
+//     compImg.src = `./${computer}.png`;
+//     playRound(player, computer);
+//   }
+// });
+
+// resetBtn.addEventListener("click", function () {
+//   playerScore = 0;
+//   computerScore = 0;
+//   pScoreBox.textContent = "0";
+//   cScoreBox.textContent = "0";
+//   resetBtn.style.background = "black";
+//   resetBtn.style.color = "white";
+//   document.body.style.background = "#feea00";
+//   document.querySelector(".resetGame").textContent = "Chose your weapon!";
+//   document.querySelector(".resetGame").style.color = "black";
+//   playerImg.src = "./placeholderv1.png";
+//   compImg.src = "./placeholderv1.png";
+// });

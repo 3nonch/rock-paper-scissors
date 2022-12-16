@@ -22,9 +22,13 @@
       <p class="resetGame">Chose your weapon!</p>
     </div>
     <div class="game-box">
-      <button><img src="./rock.png" alt="rock" id="rock" /></button>
-      <button><img src="./paper.png" alt="paper" id="paper" /></button>
-      <button><img src="./scissors.png" alt="scissors" id="scissors" /></button>
+      <button id="rock"><img src="./rock.png" alt="rock" id="rock" /></button>
+      <button id="paper">
+        <img src="./paper.png" alt="paper" id="paper" />
+      </button>
+      <button id="scissors">
+        <img src="./scissors.png" alt="scissors" id="scissors" />
+      </button>
     </div>
     <div class="summary">
       <div class="summary-box">
@@ -36,13 +40,15 @@
         <img class="playerTwoImg" src="./placeholderv1.png" alt="" />
       </div>
     </div>
-    <div class="winner-box">
-      <h3>Winner is: <span class="winner"></span></h3>
+    <div class="footer">
+      <div class="winner-box">
+        <h3>Winner is:</h3>
+        <span class="winner"></span>
+      </div>
+      <div class="reset-box">
+        <button id="reset" class="reset">reset</button>
+      </div>
     </div>
-    <div class="reset-box">
-      <button class="reset">reset</button>
-    </div>
-
     <script src="./script.js"></script>
   </body>
 </html>
